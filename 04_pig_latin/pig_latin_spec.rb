@@ -68,5 +68,8 @@ describe "#translate" do
   # Test-driving bonus:
   # * write a test asserting that capitalized words are still capitalized (but with a different initial capital letter, of course)
   # * retain the punctuation from the original phrase
-
+  it "capitalizes proper nouns" do
+    s = translate("he lives in Seattle")
+    s.should == "ehay iveslay inay Eattlesay"
+  end
 end
