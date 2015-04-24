@@ -13,7 +13,7 @@ class Timer
         timer = "#{padded(hours)}:#{padded(minutes)}:#{padded(seconds_remaining)}"
     end
     
-    def padded(number)
+    def padded(number) # Adds extra 0 if time is a single digit (e.g. :9 to :09)
         if number < 10
             return "0#{number}"
         elsif number.to_s.length == 2
